@@ -1,0 +1,60 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Pacientes</title>
+    <link rel="stylesheet" href="Historico.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Histórico de Pacientes</h1>
+        <div class="paciente">
+            <h2>Nome do Paciente: <span id="nome-paciente"></span></h2>
+            <div class="consultas">
+                <h3>Consultas Anteriores:</h3>
+                <ul id="lista-consultas"></ul>
+            </div>
+            <div class="diagnosticos">
+                <h3>Diagnósticos:</h3>
+                <ul id="lista-diagnosticos"></ul>
+            </div>
+            <div class="tratamentos">
+                <h3>Tratamentos:</h3>
+                <ul id="lista-tratamentos"></ul>
+            </div>
+        </div>
+        <button id="btn-novo-paciente">Novo Paciente</button>
+        <button id="btn-buscar-paciente">Buscar Paciente</button>
+    </div>
+
+    <div class="modal" id="modal-novo-paciente">
+        <h2>Novo Paciente</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required><br><br>
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" required><br><br>
+            <button id="btn-salvar-paciente">Salvar</button>
+            <button id="btn-cancelar">Cancelar</button>
+        </form>
+    </div>
+
+    <div class="modal" id="modal-buscar-paciente">
+        <h2>Buscar Paciente</h2>
+        <form>
+            <label for="nome-buscar">Nome:</label>
+            <input type="text" id="nome-buscar" required><br><br>
+            <button id="btn-buscar">Buscar</button>
+            <button id="btn-cancelar-buscar">Cancelar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

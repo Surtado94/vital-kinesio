@@ -1,0 +1,148 @@
+/* Estilo Geral da Página */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: #f4f6f9;
+}
+
+
+/* Barra Lateral (Sidebar) */
+
+.sidebar {
+    width: 250px;
+    background-color: #3a3f51;
+    color: #ffffff;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+/* Barra de Pesquisa na Sidebar */
+
+.group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+    /* Espaço abaixo da barra de pesquisa */
+}
+
+.input {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 35px;
+    padding-left: 2.5rem;
+    box-shadow: 0 0 0 1.5px #3a3f51, 0 0 25px -17px #000;
+    border: 0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    outline: none;
+    color: #3a3f51;
+    transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: text;
+    z-index: 0;
+}
+
+.input::placeholder {
+    color: #bdbecb;
+}
+
+.input:hover {
+    box-shadow: 0 0 0 2px #4CAF50, 0px 0px 25px -15px #000;
+}
+
+.input:focus {
+    box-shadow: 0 0 0 2px #4CAF50;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    fill: #bdbecb;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* Navegação na Sidebar */
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    color: #4CAF50;
+}
+
+
+/* Conteúdo Principal */
+
+.content {
+    margin-left: 250px;
+    padding: 40px;
+    background-color: #f4f6f9;
+    width: calc(100% - 250px);
+}
+
+
+/* Cabeçalho */
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+header p {
+    color: #777;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
